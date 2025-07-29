@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | HealthSys</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    html, body {
+      margin: 0; padding: 0;
+      width: 100%; height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #23a6d5, #23d5ab, #6e45e2, #88d3ce);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%; height: 100%;
+      top: 0; left: 0;
+      z-index: 0;
+    }
+    .form-container {
+      position: relative;
+      z-index: 1;
+      background: rgba(0,0,0,0.5);
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 400px;
+      margin: 100px auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      animation: fadeIn 1.5s ease;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .form-container button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #0072ff, #00c6ff);
+    }
+    .form-container p {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .form-container a {
+      color: #00c6ff;
+      text-decoration: none;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="form-container">
+
+    <h2>Login Akun</h2>
+    <form method="POST" action="/login">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Belum punya akun? <a href="/register">Daftar</a></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS.load('particles-js', "{{ url_for('static', filename='particles.json') }}");
+  </script>
+</body>
+</html>

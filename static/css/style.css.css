@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.overlay h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.overlay span {
+    color: #00ffe7;
+    text-shadow: 0 0 15px #00ffe7;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.buttons .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 1em;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    box-shadow: 0 0 15px rgba(0,198,255,0.7);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.buttons .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(0,198,255,1);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #00c6ff;
+}
+.form-container {
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 400px;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.form-container button:hover {
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0,198,255,0.8), 0 0 20px rgba(0,198,255,0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { text-shadow: 0 0 10px rgba(0,198,255,0.8); }
+    50% { text-shadow: 0 0 20px rgba(0,198,255,1); }
+    100% { text-shadow: 0 0 10px rgba(0,198,255,0.8); }
+}
+
+.form-container {
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    text-align: center;
+}
